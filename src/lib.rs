@@ -1,14 +1,9 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
-}
+#![allow(incomplete_features)]
+#![feature(generic_const_exprs)]
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+pub mod chars;
+pub mod fsm;
+pub mod matchers;
+mod utils;
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
-}
+//type Regex<C: chars::Chars> = ();
